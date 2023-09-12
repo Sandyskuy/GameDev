@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4rmm1sd5lgxq"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_n7d7h"]
+[ext_resource type="Texture2D" uid="uid://cnug7ad38sxyn" path="res://asset/Screenshot (18).png" id="2_qhan6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_n7d7h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(564, 338)
+scale = Vector2(0.672035, 0.796875)
+texture = ExtResource("2_qhan6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 334.0
+offset_top = 178.0
+offset_right = 810.0
+offset_bottom = 286.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Play
+"
+
+[connection signal="button_up" from="MarginContainer/VBoxContainer/MarginContainer/Button" to="." method="_on_button_button_up"]

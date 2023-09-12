@@ -1,0 +1,98 @@
+[gd_scene load_steps=20 format=3 uid="uid://ds4r3t5ccnakb"]
+
+[ext_resource type="Texture2D" uid="uid://ck7jxitfw7737" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_000.png" id="1_pwjpq"]
+[ext_resource type="Texture2D" uid="uid://bfl7mfir5lud5" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_001.png" id="2_42dxd"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="2_j0kxs"]
+[ext_resource type="Texture2D" uid="uid://baocs5ukpgjea" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_002.png" id="3_i0mx2"]
+[ext_resource type="Texture2D" uid="uid://c641wlveo8i" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_003.png" id="4_qe0tu"]
+[ext_resource type="Texture2D" uid="uid://ci2mfpcww37r5" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_004.png" id="5_yg5hu"]
+[ext_resource type="Texture2D" uid="uid://bla2k2svbqvij" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_005.png" id="6_uhl6o"]
+[ext_resource type="Texture2D" uid="uid://dt3ahcvdkkdlu" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_006.png" id="7_84ehv"]
+[ext_resource type="Texture2D" uid="uid://dfk2nbvs5iw3a" path="res://asset/Main Characters/Wolf/Run right/__Wolf_Run_007.png" id="8_p7ne7"]
+[ext_resource type="Texture2D" uid="uid://ciypktih30m6o" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_000.png" id="10_grknh"]
+[ext_resource type="Texture2D" uid="uid://d13v8g4uptjhv" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_001.png" id="11_0bo4c"]
+[ext_resource type="Texture2D" uid="uid://blsh6e5go11i" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_002.png" id="12_6m8gu"]
+[ext_resource type="Texture2D" uid="uid://cbve36ip6m386" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_003.png" id="13_4oti0"]
+[ext_resource type="Texture2D" uid="uid://cniwuu0hiwhnd" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_004.png" id="14_yivlk"]
+[ext_resource type="Texture2D" uid="uid://1n1qnvfl4jlt" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_005.png" id="15_7e4me"]
+[ext_resource type="Texture2D" uid="uid://w8tom1opgjao" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_006.png" id="16_620dg"]
+[ext_resource type="Texture2D" uid="uid://cnswij106lsgl" path="res://asset/Main Characters/Wolf/Run left/__Wolf_Run_007.png" id="17_j2nho"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nj7rl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pwjpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_42dxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_i0mx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qe0tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yg5hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uhl6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_84ehv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p7ne7")
+}],
+"loop": true,
+"name": &"Kanan",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_grknh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0bo4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6m8gu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4oti0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yivlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7e4me")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_620dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_j2nho")
+}],
+"loop": true,
+"name": &"Kiri",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfthn"]
+size = Vector2(492.876, 359.079)
+
+[node name="Sprite2D" type="CharacterBody2D"]
+position = Vector2(126, 475)
+scale = Vector2(0.183616, 0.175449)
+script = ExtResource("2_j0kxs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(547.338, -245.085)
+scale = Vector2(1.24923, 1.4471)
+sprite_frames = SubResource("SpriteFrames_nj7rl")
+animation = &"Kiri"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(562.315, -42.7478)
+shape = SubResource("RectangleShape2D_vfthn")

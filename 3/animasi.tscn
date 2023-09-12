@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfwe380iupdgq"]
+
+[ext_resource type="PackedScene" uid="uid://ds4r3t5ccnakb" path="res://sprite_2d.tscn" id="1_14r5b"]
+[ext_resource type="PackedScene" uid="uid://b27kwqk17a32q" path="res://jalan.tscn" id="2_p5tvy"]
+[ext_resource type="PackedScene" uid="uid://bget0yyyw3dp4" path="res://parallax_background.tscn" id="3_1wipl"]
+
+[node name="Animasi" type="Node2D"]
+
+[node name="Sprite2D" parent="." instance=ExtResource("1_14r5b")]
+position = Vector2(482, 475)
+scale = Vector2(-0.166058, 0.146668)
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+position = Vector2(-632.31, 13.6365)
+rotation = 3.14159
+scale = Vector2(6.02199, -6.81812)
+
+[node name="jalan" parent="." instance=ExtResource("2_p5tvy")]
+position = Vector2(153, 293)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_1wipl")]
